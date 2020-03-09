@@ -1,4 +1,4 @@
-<div class="mx-auto mw-500 mt-10">
+<div class="mx-auto mw-500 p-10 todo-list">
     <app-todo-form (addTodoEmitter)="addTodo($event)"></app-todo-form>
     <div>
         <app-todo-card *ngFor="let todo of todos" [todo]="todo" (removeTaskEmitter)="removeTask($event)" (completedTaskEmitter)="completedTask($event)"></app-todo-card>

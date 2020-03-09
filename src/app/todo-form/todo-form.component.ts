@@ -9,9 +9,10 @@ export class TodoFormComponent implements OnInit {
   @Output() addTodoEmitter = new EventEmitter<string>();
   inputText = '';
   addTodo(){
-    console.log(this.inputText);
-    this.addTodoEmitter.emit(this.inputText);
-    this.inputText = '';
+    if(this.inputText.length > 0){
+      this.addTodoEmitter.emit(this.inputText);
+      this.inputText = '';
+    }
   }
   constructor() { }
 
