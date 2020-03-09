@@ -1,0 +1,6 @@
+<form (ngSubmit)="addTodo()" class="d-flex justify-space-between">
+    <mat-form-field>
+        <input matInput color="primary" name="todo-input-field" type="text" placeholder="Lägg till uppgift..." [(ngModel)]="inputText">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Lägg till</button>
+</form>

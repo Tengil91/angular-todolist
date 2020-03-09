@@ -1,0 +1,10 @@
+<div class="todo-card mt-10">
+    <div class="d-flex justify-space-between">
+        <p>{{todo.task}}</p>
+        <small *ngIf="todo.completed">done</small>
+    </div>
+    <div class="d-flex justify-flex-end">
+        <button mat-raised-button (click)="removeTask()" color="primary" class="ml-auto">Ta bort</button>
+        <button *ngIf="!todo.completed" mat-raised-button (click)="completedTask()" color="primary">Klar</button>
+    </div>
+</div>
