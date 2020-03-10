@@ -11,15 +11,15 @@ export class TodoCardComponent implements OnInit {
   @Output() completedTaskEmitter = new EventEmitter();
   @Output() removeTaskEmitter = new EventEmitter();
 
+  constructor() { }
+  
+  ngOnInit(): void {
+  }
+  
   completedTask(){
     this.completedTaskEmitter.emit(this.todo.id);
   }
   removeTask(){
     this.removeTaskEmitter.emit(this.todo.id);
   }
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

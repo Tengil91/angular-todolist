@@ -9,15 +9,16 @@ export class TodoButtonsComponent implements OnInit {
 
   @Output() completedAllEmitter = new EventEmitter();
   @Output() removeAllEmitter = new EventEmitter();
+  
+  constructor() { }
+  
+  ngOnInit(): void {
+  }
+  
   completedAll(){
     this.completedAllEmitter.emit();
   }
   removeAll(){
     this.removeAllEmitter.emit();
   }
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -8,15 +8,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class TodoFormComponent implements OnInit {
   @Output() addTodoEmitter = new EventEmitter<string>();
   inputText = '';
+  constructor() { }
+  
+  ngOnInit(): void {
+  }
+  
   addTodo(){
     if(this.inputText.length > 0){
       this.addTodoEmitter.emit(this.inputText);
       this.inputText = '';
     }
   }
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

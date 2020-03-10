@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RemoveTodoService } from './remove-todo.service';
+import { TodoService } from './todo.service';
 
-describe('RemoveTodoService', () => {
-  let service: RemoveTodoService;
+describe('TodoService', () => {
+  let service: TodoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RemoveTodoService);
+    service = TestBed.inject(TodoService);
   });
 
   it('should be created', () => {
